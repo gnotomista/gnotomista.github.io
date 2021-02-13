@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Gennaro Notomista</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Scripts
+   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119118422-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-119118422-1');
+  </script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/icons/category-white-18dp.svg">
+
+</head>
+<body>
+
+  <!-- Reference to top
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <a id="top"></a>
+
+  <!-- Navbar
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <div class="navbar-spacer"></div> -->
+  <nav class="navbar">
+    <div class="container-center">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="index.html">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link active" href="research.html">Research</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="publications.html">Publications</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="files/notomista_gennaro_cv.pdf">CV</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="ancillaries.html">Res ancillares</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 5%">
+        <ul>
+          <li><a href="research.html#longdurationrobotautonomy">Long-duration robot autonomy</a></li>
+          <li><a href="research.html#robotdesign">Robot design</a></li>
+          <li><a href="research.html#humanrobotinteraction">Human-robot interaction</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 15%">
+        <h4 id="longdurationrobotautonomy">Long-duration robot autonomy</h4>
+        <p>
+          In long-duration autonomy applications, robots are deployed to <b>perform tasks over long time scales</b>. Examples include:
+          <ul>
+            <li>Climate-change ecology</li>
+            <li>Space exploration</li>
+            <li>Automated agriculture</li>
+            <li>Traffic monitoring</li>
+          </ul>
+          As a consequence of the long-term deployment, the robots will end up <b>operating under unknown conditions</b>, which were not planned and accounted for during the design phase.
+          These scenarios offer a variety of challenges which are not encountered in any other discipline of robotics and unveil the potential <b>fragility of traditional design and control techniques</b> employed to build and program robots.
+        </p>
+
+        <hr>
+
+        <h5>Constraints-driven control</h5>
+        <p>
+          The fragility coming from a cost-optimization formulation may lead to sub-optimality or even infeasibility of the designed controllers in presence of unmodeled phenomena. For this reason, a more desirable formulation is the following constraint-based energy-minimization:
+          $$
+          \begin{aligned}
+          \underset{u}{\mathrm{minimize}} ~~& \| u \|^2\\
+          \mathrm{subject~to} ~~& g(x,u) \le 0,
+          \end{aligned}
+          $$
+          where \(x\) is the robot state, \(u\) its control effort and the constraint \(g(x,u) \le 0\) encodes the execution of desired tasks.
+          <br>
+          Control barrier functions allow us to formulate a constrained-optimization-based control framework where <b>complex behaviors</b> specified as high-level tasks in terms of set stability and set invariance conditions are <b>turned into constraints</b> on the robot input.
+          <br>
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/h-OTe4ieOrI"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="highlightbox">
+          <p><b>A natural philosophical perspective</b></p>
+          <div style="width: 30%; float: left; text-align: center; vertical-align: middle;">
+            <img src="images/research/three_toed_sloth.jpg" width=75%>
+          </div>
+          <div style="margin-left: 30%">
+            Embodiments of the constraint-driven control paradigm can be found numerous in nature. Ecological studies on the evolution and the distribution of species show that the environment and its ecological constraints, such as favorable climate and availability of resources, are more effective than goal-driven behaviors in shaping characteristic features and behaviors of species. The low-energy lifestyle of <b>three-toed sloths</b> is an iconic example.
+          </div>
+          <p>
+            In philosophy, constraints-driven control may be recognized in Arthur Schopenhauer's theory according to which "A man can do what he wants, but not want what he wants", or the more practical "A man's actions are determined by necessity, external and internal" attributed to Albert Einstein.
+          </p>
+        </div>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>G. Notomista and M. Egerstedt, “Constraint-driven coordinated control of multi-robot systems”, American Control Conference, 2019</li>
+          </ul>
+        </p>
+
+        <hr>
+
+        <h5>Task persistification</h5>
+        <p>
+          A paramount problem in long-duration robot autonomy is the <b>limited amount of energy</b> that mobile robots can store in their batteries. Provided that there is enough power generated in the environmnet&mdash;e.g. by sunlight for solar-powered robots, or, more generally, by charging stations&mdash;, we can ensure that robots will never run out of energy while executing their tasks by solving the following optimization problem for the robot control input \(u\):
+          $$
+          \begin{aligned}
+          \underset{u,\delta}{\mathrm{minimize}} ~~& \| u \|^2 + \kappa \delta^2 \\
+          \mathrm{subject~to} ~~& g_{task}(x,u) \le \delta\\
+          ~~&g_{energy}(x,E,u) \le 0,
+          \end{aligned}
+          $$
+          which realizes the persistification of tasks. Here, \(E\) is the energy stored in the robot battery, and the task execution encoded by \(g_{task}\) is relaxed by \(\delta\in\mathbb R\), so that the energy constraint \(g_{energy}(x,E,u) \le 0\) can always be satisfied.
+        </p>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>G. Notomista and M. Egerstedt, “Persistification of robotic tasks”, IEEE Transactions on Control Systems Technology, vol. 29, no. 2, pp. 756-767, 2021</li>
+            <li>G. Notomista, S. Ruf, and M. Egerstedt, “Persistification of robotic tasks using control barrier functions”, IEEE Robotics and Automation Letters, Vol. 3, No. 2, pp. 758-763, 2018</li>
+          </ul>
+        </p>
+
+        <hr>
+
+        <h5>Task prioritization and allocation</h5>
+        <p>
+          There are situations in which robotic systems are able to <b>execute multiple tasks at the same time</b>. This is the case of redundant robotic system, such as humanoid robots and multi-robot systems. In the former case, redundancy comes from a number of degrees of freedom higher than the dimension of the task space: in this settings a single robot is able to execute multiple tasks concurrently.
+          <br>
+          The constraint-based formulation amenable for long-duration robot autonomy lends itself to let robots execute a prioritized stack of \(M\) tasks as follows:
+          $$
+          \begin{aligned}
+          \underset{u,\delta}{\mathrm{minimize}} ~~& \| u \|^2 + \kappa \| \delta \|^2 \\
+          \mathrm{subject~to} ~~& g_{task,1}(x,u) \le \delta_1\\
+          ~~& \quad\vdots\\
+          ~~&g_{task,M}(x,u) \le \delta_M\\
+          ~~&g_{energy}(x,E,u) \le 0\\
+          ~~&P\delta\le0,
+          \end{aligned}
+          $$
+          where \(P\), the prioritization matrix, enforces constraints onf the prioritization vector \(\delta\in\mathbb R^M\), which result in relative priority constraints between the tasks encoded by the functions \(g_{task,i},~i=1,\ldots,M\).
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/epzd6RPsuYQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          If for humanoid robots redundancy comes from a high number of degrees of freedom of the robot, in the case of multi-robot systems the degree of redundancy results from the number of different robotic units of which the system is comprised. In this case, rather than prioritizing the execution of concurrent tasks, we are interested in allocating different tasks to different robots. <b>Prioritization and allocation are two realizations of the same concept</b>&mdash;namely that different degrees of freedom may serve the execution of different tasks&mdash;and, as such, can be achieved using the same formulation:
+          $$
+          \begin{aligned}
+          \underset{u,\delta,\alpha}{\mathrm{minimize}} ~~& \| u \|^2 + \kappa_1 \| \delta \|^2 + \kappa_2 \| \alpha-\alpha_0 \|^2\\
+          \mathrm{subject~to} ~~& g_{task,1}(x,u) \le \delta_1\\
+          ~~& \quad\vdots\\
+          ~~&g_{task,M}(x,u) \le \delta_M\\
+          ~~&g_{energy}(x,E,u) \le 0\\
+          ~~&P(\alpha)\delta\le0.
+          \end{aligned}
+          $$
+          The allocation is achieved by means of the allocation vector \(\alpha\) which parametrizes the prioritization constraint \(P(\alpha)\delta\le0\); \(\alpha_0\) may indicate a desired allocation, evaluated based on the capabilities that different robots have at executing different tasks.
+          <br>
+          It is interesting to notice that the allocation \(\alpha\) is an optimization variable <b>evaluated online</b> alongside the control input \(u\) required by the robots to execute the allocated tasks. This feature allows the allocation algorithm to adapt to varying environmental conditions and render the multi-robot system <b>resilient to failures and unexpected phenomena</b>.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/OQiLbEaZsZw"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/fdfYID7u72o"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>G. Notomista, S. Mayya, Y. Emam, C. Kroninger, A. Bohannon, S. Hutchinson and M. Egerstedt, “A Resilient and Energy-Aware Task Allocation Framework for Heterogeneous Multi-Robot Systems”, IEEE Transactions on Robotics (submitted)</li>
+            <li>Y. Emam, G. Notomista, P. Glotfelter, and M. Egerstedt, “Data-Driven Adaptive Task Allocation for Heterogeneous Multi-Robot Teams Using Robust Control Barrier Functions”, IEEE International Conference on Robotics and Automation, 2021 (submitted)</li>
+            <li>G. Notomista, S. Mayya, M. Selvaggio, M. Santos, and C. Secchi, “A set-theoretic approach to multitask execution and prioritization”, IEEE International Conference on Robotics and Automation, 2020</li>
+            <li>Y. Emam, S. Mayya, G. Notomista, A. Bohannon, and M. Egerstedt, “Adaptive task allocation for heterogeneous multi-robot teams with evolving and unknown robot capabilities”, IEEE International Conference on Robotics and Automation, 2020</li>
+            <li>G. Notomista, S. Mayya, S. Hutchinson, and M. Egerstedt, “An optimal task allocation strategy for heterogeneous multi-robot systems”, European Control Conference, 2019</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="twelve columns" style="text-align: right; margin-top: 5%">
+      <a href="research.html#top"><img src="images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 15%">
+        <h4 id="robotdesign">Robot design</h4>
+
+        <h5 id="slothbot">SlothBot</h5>
+        <div class="image-container">
+          <img src="images/research/slothbot/slothbot1.jpg" alt="" width=24%>
+          <img src="images/research/slothbot/slothbot2.jpeg" alt="" width=24%>
+          <img src="images/research/slothbot/slothbot3.jpeg" alt="" width=24%>
+          <img src="images/research/slothbot/slothbot_abg.jpeg" alt="" width=24%>
+          <figcaption style="text-align:center">Iterations of the SlothBot design: from the lab to the Atlanta Botanical Garden.</figcaption>
+        </div>
+        <p>
+          The SlothBot is a wire-traversing robot for long-term environmental monitoring applications. It is a solar-powered, slow-paced, energy-efficient robot (hence its name) capable of moving on a mesh of wires by switching between branching wires.
+          The design objectives that drove the development of the SlothBot have been the following:
+          <ul>
+            <li>Fail-safeness</li>
+            <li>Wire-switching capability</li>
+            <li>Energy efficiency</li>
+            <li>Design simplicity</li>
+          </ul>
+        </p>
+        <div class="image-container">
+          <img src="images/research/slothbot/slothbot_cad.jpg" alt="" width="40%"/>
+          <img src="images/research/slothbot/slothbot_single_body.jpg" alt="" width="40%"/>
+        </div>
+        <p>
+          The mechanical structure of the SlothBot consists of two bodies connected by an actuated hinge. Each body (shown in the figure above), houses a tire driven by a DC motor. Wheels, as opposed to brachiation-based locomotion, make motion control simple, while, at the same time, allowing a safe motion on a mesh of wires. The two servo motors on each body allow for the opening of gaps in the top gears: this allows the SlothBot to switch between branching wires. The switching maneuver is shown in the sequence of figures below.
+        </p>
+        <div class="image-container">
+          <img src="images/research/slothbot/switch_seq5.jpg" width="18%"/>
+          <img src="images/research/slothbot/switch_seq4.jpg" width="18%"/>
+          <img src="images/research/slothbot/switch_seq3.jpg" width="18%"/>
+          <img src="images/research/slothbot/switch_seq2.jpg" width="18%"/>
+          <img src="images/research/slothbot/switch_seq1.jpg" width="18%"/>
+        </div>
+        <p>
+          The switching mechanism of the SlothBot allows it to safely switch between branching wires. In fact, at each point in time, at least one of the two bodies is firmly hung on the wires. In the figures above, from left to right, we see the SlothBot switching from one branch to another. First, the top gears of the rightmost body open, allowing the first body to move onto the new branch. Once the first body is firmly attached to the new branch, the top gears of the second body open, letting the SlothBot complete the switching maneuver.
+          The following videos describe locomotion principle and switching mechanism, and show the SlothBot in action.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            wid th="560"
+            height="315"
+            src="https://www.youtube.com/embed/Fva1RT9-I9o"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Urfa0EcsnMA"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>G. Notomista, Y. Emam, and M. Egerstedt, “The SlothBot: A novel design for a wire-traversing robot”, IEEE Robotics and Automation Letters, Vol. 4, No. 2, pp. 1993-1998, 2019</li>
+          </ul>
+        </p>
+
+        <hr>
+
+        <h5 id="brushbot">Brushbot</h5>
+
+        <div class="image-container">
+          <img src="images/research/brushbot/brushbot_v1.jpg" width="60%"/>
+        </div>
+        <p>
+          Brushbots are ground mobile robots that exploit brushes and vibration motors for locomotion.
+
+          The initial realization shown in the picture above was built by <a href="https://thevariableconstant.blogspot.com/" target="_blank">Jamison Go</a> and used by <a href="http://rowlandoflaherty.com/" target="_blank">Rowlan O'Flaherty</a> (former undergraduate and PhD student, respectively, in the <a href="http://gritslab.gatech.edu" target="_blank">GRITS Lab</a>).
+
+          The next video shows its resuscitation after having been forgotten for several years.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/XiDWrtOFDd4"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          Brushbots drive on brushes using vibrating motors. The vibrations generated by the motors make the brushes act like springs that randomly push the robot around. This randomness is the main source of problems, and therefore interest, when working with this robot. In the following, some of the attempts to model and control such a robot are reported:
+          <ul>
+            <li><a href="https://arxiv.org/abs/1302.5952" target="_blank">Swarming, swirling and stasis in sequestered bristle-bots</a> by <a href="http://wwwhome.lorentz.leidenuniv.nl/~giomi/" target="_blank">Professor Giomi</a>'s group at Universiteit Leiden</li>
+            <li><a href="https://arxiv.org/abs/1702.00343" target="_blank"}>The inversion of motion of bristle bots: analytical and experimental analysis</a> by <a href="http://people.sissa.it/~desimone/" target="_blank">Professor De Simone</a>'s group at Scuola Internazionale Superiore di Studi Avanzati in Trieste</li>
+            <li><a href="https://vimeo.com/162755627" target="_blank">Smartgeometry 2016: Swarmbot Assemblage</a> by <a href="http://cei.ece.cornell.edu/" target="_blank">Kirstin Petersen</a>'s group at Cornell University</li>
+            <li><a href="https://arxiv.org/abs/1801.09627" target="_blank">Safety-aware Adaptive Reinforcement Learning with Applications to Brushbot Navigation</a> by Motoya Ohnishi when he was a visiting student in the <a href="http://gritslab.gatech.edu" target="_blank">GRITS Lab</a></li>
+          </ul>
+        </p>
+        <p>
+          Nevertheless, a way of reliably controlling these simple robots still remains elusive, unless more accurate mechanical designs are employed. See pictures below.
+        </p>
+        <div class="image-container">
+          <img src="images/research/brushbot/brushbot_brushbot.jpg" width="30%"/>
+          <img src="images/research/brushbot/brushbot_brushy.jpg" width="30%"/>
+          <img src="images/research/brushbot/brushbot_elbrusho.jpg" width="30%"/>
+        </div>
+        <p>
+          The following video shows these three robots going around the <a href="https://www.robotarium.gatech.edu/" target="_blank">Robotarium</a>.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/q2JtnrwAmGY"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          The dream of a reliable and robust robot which is simple to build and control will drive the next steps of the research on the brushbots. In particular, this platform seems to be particularly suitable to experiment with machine learning and control, and their synergistic application to solve problems in robotics.
+        </p>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>G. Notomista, S. Mayya, A. Mazumdar, S. Hutchinson, and M. Egerstedt, “A study of a class of vibration-driven robots: Modeling, analysis, control and design of the brushbot”, IEEE/RSJ International Conference on Intelligent Robots and Systems, 2019</li>
+          </ul>
+        </p>
+
+        <hr>
+
+        <h5 id="swarmingbrushbots">Swarming brushbots</h5>
+
+        <div class="image-container">
+          <img src="images/research/brushbot/brushbot_swarm.jpg" alt="" width=60%>
+          <figcaption style="text-align:center">Brushbots are coming!</figcaption>
+        </div>
+        <p>
+          A team of 4 roboticists (Jeremy Cai, Yousef Emam, Siddharth Mayya and myself) spent a Saturday building 32 differential-drive-like brushbots from scratch. See pictures below for the highlights of the day.
+          <br>
+          <i>Rome wasn't built in a day, a swarm of brushbots...almost!</i>
+        </p>
+        <div class="image-container">
+          <img src="images/research/brushbot/PCBs.jpg" width="24%"/>
+          <img src="images/research/brushbot/soldering_motors.jpg" width="24%"/>
+          <img src="images/research/brushbot/mounting_brushes.jpg" width="24%"/>
+          <br>
+          <img src="images/research/brushbot/brushbots_in_a_box.jpg" width="24%"/>
+          <img src="images/research/brushbot/complete_swarm.jpg" width="24%"/>
+          <img src="images/research/brushbot/26_brushbots_on_the_robotarium.jpg" width="24%"/>
+          <img src="images/research/brushbot/charging_brushbots.jpg" width="24%"/>
+          <figcaption style="text-align:center">Highlights from the building of a swarm of brushbots: from flashing PCBs, soldering motors, mounting brushes, to the first control and wireless charging tests on the Robotarium.</figcaption>
+        </div>
+        <p>
+          These brushbots are featured in action in the following video, where they are deployed on the Robotarium to execute coordinated control algorithms.
+        </p>
+        <center>
+          <div style="width:75%">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/1AoQofZpRAg"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </center>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>S. Mayya, G. Notomista, D. Shell, S. Hutchinson, and M. Egerstedt, “Non-uniform robot densities in vibration driven swarms using phase separation theory”, IEEE/RSJ International Conference on Intelligent Robots and Systems, 2019</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="twelve columns" style="text-align: right; margin-top: 5%">
+      <a href="research.html#top"><img src="images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 15%">
+        <h4 id="humanrobotinteraction">Human-robot interaction</h4>
+
+        <p>
+          In applications where robots interact with humans, one of the most important aspect to consider is <b>safety</b>. This involves keeping both human beings and robotic systems safe, preventing the latter to be harmed and the former to brake.
+        </p>
+        <p>
+          Moreover, when human operators need to control robots through, for instance, predefined gestures or joysticks, an equally important aspect to take into account is the <b>intuitiveness</b> of the interaction. This entails the design of mappings between the inputs that a human being is able to provide to the control inputs required by a robotic system.
+        </p>
+
+        <hr>
+
+        <h5>Safe and passive interaction control</h5>
+        <p>
+          <b>Passivity</b> is a control-theoretic concept which allows us to reason about behaviors of dynamical systems from an energetic point of view. For this reason, it is possible to define the safety of a human-robot interaction system in terms of its passivity properties.
+          Safety in control theory is also often identified with the concept of <b>forward invariance</b>, where we aim at confining the state of a dynamical system within a prescribed safe set. While this is complementary to the notion of passivity, both can be encoded as constraints for the interaction control system and enforced holistically.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/W-JkU42yATM"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          One of the causes for a system to be non-passive or unsafe is <b>communication delay</b>. In a joint work between the <a href="http://gritslab.gatech.edu" target="_blank">GRITS Lab</a> at Georgia Tech and the <a href="https://www.scl.ipc.i.u-tokyo.ac.jp/" target="_blank">Fujita-Yamauchi Lab</a> at Tokyo Tech, the effect of real internet communication delays on the coordination of two multi-robot systems located in two different labs separated by 11,000 km has been studied. The above video summarizes the <b>first experiment of its kind</b>. The next video shows the same technique applied to the formation control of a multi-robot system with artificial communication delays.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NTV4bDR2rYc"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>R. Funada, X. Cai, G. Notomista, M. W. Surya Atman, J. Yamauchi, M. Fujita, and M. Egerstedt, “Coordination of robot teams over long distances. From Georgia Tech to Tokyo Tech and back: An 11,000km multi-robot experiment”, IEEE Control Systems Magazine, Vol. 40, No. 4, pp. 53-79, 2020</li>
+            <li>G. Notomista and X. Cai, “A Safety and Passivity Filter for Robot Teleoperation Systems”, International Workshop on Human-Friendly Robotics, 2020</li>
+            <li>G. Notomista, X. Cai, J. Yamauchi, and M. Egerstedt, “Passivity-based decentralized control of multi-robot systems with delays using control barrier functions”, IEEE International Symposium on Multi-Robot and Multi-Agent Systems, 2019</li>
+          </ul>
+        </p>
+
+        <hr>
+
+        <h5>Human-multi-robot interaction for object grasping</h5>
+        <p>
+          In this preliminary work, done in collaboration with <a href="http://wpage.unina.it/mario.selvaggio/" target="_blank">Mario Selvaggio</a> from the Università degli Studi di Napoli "Federico II", we developed an intuitive human-multi-robot shared interaction control for applications of object grasping and manipulation.
+          <br>
+          The kinematic of the human hand is mapped to the kinematic of the multi-robot system in order to naturally control a large number of robots using intuitive grasping gestures.
+        </p>
+        <div class="image-container">
+          <img src="images/research/hsi.jpg" alt="" width=60%>
+        </div>
+        <p>
+          <b>References</b>
+          <ul>
+            <li>M. Selvaggio and G. Notomista, “Towards natural human-swarm teleoperation using hand synergies”, Workshop "Swarms: From Biology to Robotics and Back" at IEEE International Conference on Robotics and Automation, 2018</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="twelve columns" style="text-align: right; margin-top: 5%">
+      <a href="research.html#top"><img src="images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+    </div>
+  </div>
+
+  <!-- Footer
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <footer class="container">
+    <div class="row">
+      <div class="six columns offset-by-three" style="margin-top: 15%; text-align: center">
+        <a style="margin: 5%" href="mailto:gennaro.notomista@inria.fr">
+          <img src="images/icons/envelope-fill.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://scholar.google.com/citations?user=KbEJvvwAAAAJ&hl=en&oi=ao" target="_blank">
+          <img src="images/icons/google-scholar-square.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://github.com/gnotomista" target="_blank">
+          <img src="images/icons/github.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://www.youtube.com/channel/UCvILzv7GRzAzQKuJcFpVLaw" target="_blank">
+          <img src="images/icons/youtube.svg" alt="" width="24" height="19">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 10%; text-align: center">
+        <small>&copy; 2021 Gennaro Notomista</small>
+      </div>
+    </div>
+  </footer>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
