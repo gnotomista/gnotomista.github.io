@@ -1,0 +1,117 @@
+/* Based on view-source:http://getskeleton.com/css/custom.css */
+/* restyle existing components */
+table, tr, th, td {
+    border: none;
+}
+
+/* containers */
+.container {
+  max-width: 800px; }
+
+.container-center {
+  max-width: 800px;
+	display: table;
+	margin: 0 auto;
+}
+
+/* image container */
+.image-container {
+  margin: 25px auto;
+  text-align: center;
+}
+
+/* video container */
+.video-container {
+  margin: 25px auto;
+  text-align: center;
+}
+
+/* container for responsive iframe */
+.iframe-container {
+  position: relative;
+  width: var(--video-width);
+  margin: 25px auto;
+  overflow: hidden;
+  padding-top: calc(var(--video-width)*0.5625); /* 16:9 Aspect Ratio */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* navigation bar */
+.navbar + .docs-section {
+  border-top-width: 0; }
+.navbar,
+.navbar-spacer {
+  display: block;
+  width: 100%;
+  height: 16.25rem;
+  background: #fff;
+  z-index: 99;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
+.navbar-spacer {
+  display: none; }
+.navbar-list {
+  list-style: none;
+  margin-bottom: 0; }
+.navbar-item {
+  position: relative;
+  float: center;
+  margin-bottom: 0; }
+.navbar-link {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  margin-right: 35px;
+  text-decoration: none;
+  line-height: 3.25rem;
+  color: #222; }
+.navbar-link.active {
+  color: #00468b; }
+
+/* collapse navigation bar for small screens */
+@media (min-width: 680px) {
+  .navbar,
+  .navbar-spacer {
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    background: #fff;
+    z-index: 99;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee; }
+  .navbar-item {
+    position: relative;
+    float: left;
+    margin-bottom: 0; }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #222; }
+}
+
+/* highlight box */
+.highlightbox {
+  margin-top: 2rem;
+  margin-bottom: 25px;
+  padding: 1.5rem 2.5rem;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  font-size: 90%;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+}
