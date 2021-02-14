@@ -109,8 +109,11 @@
 
           function redirectURL() {
             var desiredURL = window.location.href;
+            var desiredURLslash = desiredURL.concat("/");
             if (desiredURL in redirectionDictionary) {
               window.location.replace(redirectionDictionary[desiredURL]);
+            } else if (desiredURLslash in redirectionDictionary) {
+              window.location.replace(redirectionDictionary[desiredURLslash]);
             } else {
               window.location.replace(defaultURL);
             }
