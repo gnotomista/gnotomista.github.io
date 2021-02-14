@@ -90,30 +90,32 @@
             "https://www.gnotomista.com/projects/" : "https://www.gnotomista.com/ancillaries.html",
             "https://www.gnotomista.com/projects/aadc/" : "https://www.gnotomista.com/ancillaries.html#driftinggoals",
             "https://www.gnotomista.com/projects/angrybirds/" : "https://www.gnotomista.com/ancillaries.html#angrybirds",
-            "https://www.gnotomista.com/projects/fem/" : "https://www.gnotomista.com/ancillaries.html",
+            "https://www.gnotomista.com/projects/fem/" : "https://github.com/gnotomista/fem",
             "https://www.gnotomista.com/projects/hydraulic_hybrid/" : "https://www.gnotomista.com/ancillaries.html#sparklingplugs",
             "https://www.gnotomista.com/projects/robot_control/" : "https://www.gnotomista.com/ancillaries.html#oscaroscara",
-            "https://www.gnotomista.com/projects/vehicle_design/" : "https://www.gnotomista.com/ancillaries.html",
+            "https://www.gnotomista.com/projects/vehicle_design/" : "https://github.com/gnotomista/vehicle_design",
             "https://www.gnotomista.com/publications/" : "https://www.gnotomista.com/publications.html",
             "https://www.gnotomista.com/research/" : "https://www.gnotomista.com/research.html",
-            "https://www.gnotomista.com/research/brushbot/" : "https://www.gnotomista.com/research.html#swarmingbrushbots",
+            "https://www.gnotomista.com/research/brushbot/" : "https://www.gnotomista.com/research.html#brushbot",
             "https://www.gnotomista.com/research/constraints_driven_control/" : "https://www.gnotomista.com/research.html#longdurationrobotautonomy",
             "https://www.gnotomista.com/research/coverage_on_curves/" : "https://www.gnotomista.com/research.html",
             "https://www.gnotomista.com/research/hsi/" : "https://www.gnotomista.com/research.html#humanrobotinteraction",
-            "https://www.gnotomista.com/research/passivity_cbfs/" : "https://www.gnotomista.com/research.html#humanrobotinteraction",
+            "https://www.gnotomista.com/research/passivity_cbfs/" : "https://www.gnotomista.com/research.html#safetypassivity",
             "https://www.gnotomista.com/research/slothbot/" : "https://www.gnotomista.com/research.html#slothbot",
             "https://www.gnotomista.com/research/swarming_brushbots/" : "https://www.gnotomista.com/research.html#swarmingbrushbots",
-            "https://www.gnotomista.com/resume_cv/" : "https://www.gnotomista.com/files/notomista_gennaro_cv.pdf"
+            "https://www.gnotomista.com/resume_cv/" : "https://www.gnotomista.com/files/notomista_gennaro_cv.pdf",
+            "https://www.gnotomista.com/files/aadc_presentation.pdf" : "https://www.gnotomista.com/files/notomista_gennaro_aadc_presentation.pdf",
+            "https://www.gnotomista.com/files/icra_workshop_poster.pdf" : "https://www.gnotomista.com/research.html#multirobotgrasping",
+            "https://www.gnotomista.com/files/notomista_gennaro_cv.pdf" : "https://www.gnotomista.com/files/notomista_gennaro_cv.pdf",
+            "https://www.gnotomista.com/files/notomista_gennaro_phd_dissertation.pdf" : "https://www.gnotomista.com/files/notomista_gennaro_phd_thesis.pdf",
+            "https://www.gnotomista.com/files/robot_control.pdf" : "https://www.gnotomista.com/files/notomista_gennaro_robot_control.pdf"
           };
           redirectURL();
 
           function redirectURL() {
             var desiredURL = window.location.href;
-            var desiredURLslash = desiredURL.concat("/");
             if (desiredURL in redirectionDictionary) {
               window.location.replace(redirectionDictionary[desiredURL]);
-            } else if (desiredURLslash in redirectionDictionary) {
-              window.location.replace(redirectionDictionary[desiredURLslash]);
             } else {
               window.location.replace(defaultURL);
             }
