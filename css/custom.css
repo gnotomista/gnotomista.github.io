@@ -46,6 +46,10 @@ table, tr, th, td {
   border: none;
 }
 
+iframe{
+    border: 0;
+}
+
 /* navigation bar */
 .navbar + .docs-section {
   border-top-width: 0; }
