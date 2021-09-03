@@ -119,3 +119,30 @@ iframe{
   font-size: 90%;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
 }
+
+/* news colors */
+.news-generic { /* routine (e.g. personal, robots) */
+  color: #424BF4;
+}
+
+.news-highlight { /* outstanding news (e.g. projects, workshops) */
+  color: #DB4437;
+}
+
+.news-publication { /* papers */
+  color: #0F9D58;
+}
+
+.news-generic a,
+.news-highlight a,
+.news-strong a,
+.news-publication a {
+  color: #444;
+}
+
+.news-generic a:hover,
+.news-highlight a:hover,
+.news-strong a:hover,
+.news-publication a:hover {
+  color: #aaa;
+}
