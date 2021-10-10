@@ -13,6 +13,17 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Analytics scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4GKRS852H"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', 'G-X4GKRS852H');
+  </script>
+
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
@@ -23,19 +34,6 @@
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
 
-  <!-- Scripts
-   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4GKRS852H"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X4GKRS852H');
-  </script>
-
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/icons/category-white-18dp.svg">
@@ -45,9 +43,8 @@
 
   <!-- Navbar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <div class="navbar-spacer"></div> -->
-  <nav class="navbar">
-    <div class="container-center">
+  <nav id="responsive-nav" class="nav-show">
+    <div id="responsive-nav-container-center" class="container-center-navigation">
       <ul class="navbar-list">
         <li class="navbar-item">
           <a class="navbar-link" href="index.html">Home</a>
@@ -63,6 +60,9 @@
         </li>
         <li class="navbar-item">
           <a class="navbar-link" href="ancillaries.html">Res ancillares</a>
+        </li>
+        <li class="icon">
+          <a href="javascript:void(0);" onclick="toggleMobileNav();">&#9776;</a>
         </li>
       </ul>
     </div>
@@ -525,6 +525,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/nav.js"></script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
