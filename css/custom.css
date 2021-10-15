@@ -51,7 +51,7 @@ body {
 	padding-top: 56px;
 }
 .nav-hide {
-    top: -70px; /* should be >= body padding top (56px) */
+  top: -70px; /* absolute value should be >= body padding top (56px) */
 }
 .nav-show {
 	top: 0;
@@ -60,6 +60,7 @@ body {
 nav {
 	position: fixed;
 	width: 100%;
+  height: 6.5rem;
 	z-index: 10000;
 
 	background-color: #fff;
@@ -220,4 +221,9 @@ nav ul li.icon { display: none; }
 .news-strong a:hover,
 .news-publication a:hover {
   color: #aaa;
+}
+
+/* adjust anchor links for fixed header size (sticky nav bar) */
+html {
+  scroll-padding-top: 7.5rem; /* should be >= nav height (6.5rem) */
 }
