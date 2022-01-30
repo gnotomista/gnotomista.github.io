@@ -27,7 +27,7 @@ table, tr, th, td {
   width: var(--video-width);
   margin: 25px auto;
   overflow: hidden;
-  padding-top: calc(var(--video-width)*0.5625); /* 16:9 Aspect Ratio */
+  padding-top: calc(var(--video-width)*var(--ratio, 0.5625)); /* default to 16:9 aspect ratio */
 }
 
 .iframe-container iframe {
@@ -122,24 +122,24 @@ nav ul li.right { float: right; }
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 nav ul li.icon { display: none; }
 .container-center-navigation {
-  max-width: 800px;
+  max-width: 1000px;
 	display: table;
 	margin: 0 auto;
 }
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
+/* When the screen is less than 850 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:850px) {
 	nav ul li:not(:first-child) { display: none; }
 	nav ul li.icon {
 		float: right;
 		display: inline-block;
 	}
 	.container-center-navigation {
-	  max-width: 800px;
+	  max-width: 850px;
 		display: block;
 	}
 }
 /* The "mobile" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the nav look good on small screens */
-@media screen and (max-width:680px) {
+@media screen and (max-width:1000px) {
 	nav.mobile ul { /* position: relative; */ }
 	nav.mobile ul li.icon {
 		position: absolute;
@@ -172,7 +172,7 @@ nav ul li.icon { display: none; }
   margin-bottom: 0; }
 .navbar-item {
   position: relative;
-  float: center;
+  float: left;
   margin-bottom: 0; }
 .navbar-link {
   text-transform: uppercase;
@@ -193,7 +193,7 @@ nav ul li.icon { display: none; }
   border: 1px solid #E1E1E1;
   border-radius: 4px;
   font-size: 90%;
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-family: "Courier New", monospace;
 }
 
 /* news colors */
@@ -213,7 +213,8 @@ nav ul li.icon { display: none; }
 .news-highlight a,
 .news-strong a,
 .news-publication a {
-  color: #444;
+  color: inherit;
+  text-decoration: underline;
 }
 
 .news-generic a:hover,
