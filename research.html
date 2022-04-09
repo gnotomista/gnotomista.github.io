@@ -144,7 +144,7 @@
           <hr>
           <h5>Task persistification</h5>
           <p>
-            A paramount problem in long-duration robot autonomy is the <b>limited amount of energy</b> that mobile robots can store in their batteries. Provided that there is enough power generated in the environmnet&mdash;e.g. by sunlight for solar-powered robots, or, more generally, by charging stations&mdash;, we can ensure that robots will never run out of energy while executing their tasks by solving the following optimization problem for the robot control input \(u\):
+            A paramount problem in long-duration robot autonomy is the <b>limited amount of energy</b> that mobile robots can store in their batteries. Provided that there is enough power generated in the environment&mdash;e.g. by sunlight for solar-powered robots, or, more generally, by charging stations&mdash;, we can ensure that robots will never run out of energy while executing their tasks by solving the following optimization problem for the robot control input \(u\):
             $$
             \begin{aligned}
             \underset{u,\delta}{\mathrm{minimize}} ~~& \| u \|^2 + \kappa \delta^2 \\
@@ -177,7 +177,7 @@
             ~~&P\delta\le0,
             \end{aligned}
             $$
-            where \(P\), the prioritization matrix, enforces constraints onf the prioritization vector \(\delta\in\mathbb R^M\), which result in relative priority constraints between the tasks encoded by the functions \(g_{task,i},~i=1,\ldots,M\).
+            where \(P\), the prioritization matrix, enforces constraints on the prioritization vector \(\delta\in\mathbb R^M\), which result in relative priority constraints between the tasks encoded by the functions \(g_{task,i},~i=1,\ldots,M\).
           </p>
           <div class="iframe-container" style="--video-width: 60%">
             <iframe
