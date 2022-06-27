@@ -209,6 +209,10 @@ nav ul li.icon { display: none; }
   color: #0F9D58;
 }
 
+.colored-highlight { /* highlight text */
+	color: #FFC400;
+  }
+
 .news-generic a,
 .news-highlight a,
 .news-strong a,
