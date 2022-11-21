@@ -232,3 +232,8 @@ nav ul li.icon { display: none; }
 html {
   scroll-padding-top: 7.5rem; /* should be >= nav height (6.5rem) */
 }
+
+/* image look */
+img {
+	border-radius: 10px;
+}

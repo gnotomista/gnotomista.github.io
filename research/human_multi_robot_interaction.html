@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Gennaro Notomista</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Analytics scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4GKRS852H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-X4GKRS852H');
+  </script>
+  <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/icons/smart_toy_black_24dp.svg">
+</head>
+
+<body>
+  <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <nav id="responsive-nav" class="nav-show">
+    <div id="responsive-nav-container-center" class="container-center-navigation">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="../index.html">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../files/notomista_gennaro_cv.pdf">CV</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link active" href="../research.html">Research</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../publications.html">Publications</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../teaching.html">Teaching</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../ancillaries.html">Res ancillares</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../personal.html">Personal</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="../contact.html">Contact</a>
+        </li>
+        <li class="icon">
+          <a href="javascript:void(0);" onclick="toggleMobileNav();">&#9776;</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 15%">
+        <h4 id="humanrobotinteraction">Human-multi-robot interaction</h4>
+        <p>
+          In applications where robots interact with humans, one of the most important aspect to consider is
+          <b>safety</b>. This involves keeping both human beings and robotic systems safe, preventing the former to be
+          harmed and the latter to brake.
+        </p>
+        <p>
+          Moreover, when human operators need to control robots through, for instance, predefined gestures or joysticks,
+          an equally important aspect to take into account is the <b>intuitiveness</b> of the interaction. This entails
+          the design of mappings between the inputs that a human being is able to provide to the control inputs required
+          by a robotic system.
+        </p>
+        <hr>
+        <h5 id="safetypassivity">Safe and passive interaction control</h5>
+        <p>
+          <b>Passivity</b> is a control-theoretic concept which allows us to reason about behaviors of dynamical systems
+          from an energetic point of view. For this reason, it is possible to define the safety of a human-robot
+          interaction system in terms of its passivity properties.
+          Safety in control theory is also often identified with the concept of <b>forward invariance</b>, where we aim
+          at confining the state of a dynamical system within a prescribed safe set. While this is complementary to the
+          notion of passivity, both can be encoded as constraints for the interaction control system and enforced
+          holistically.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/W-JkU42yATM"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          One of the causes for a system to be non-passive or unsafe is <b>communication delay</b>. In a joint work
+          between the <a href="http://gritslab.gatech.edu" target="_blank">GRITS Lab</a> at Georgia Tech and the <a
+            href="https://www.scl.ipc.i.u-tokyo.ac.jp/" target="_blank">Fujita-Yamauchi Lab</a> at Tokyo Tech, the
+          effect of real internet communication delays on the coordination of two multi-robot systems located in two
+          different labs separated by 11,000 km has been studied. The above video summarizes the <b>first experiment of
+            its kind</b>. The next video shows the same technique applied to the formation control of a multi-robot
+          system with artificial communication delays.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NTV4bDR2rYc"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          <b>References</b>
+        </p>
+        <ul>
+          <li>R. Funada, X. Cai, G. Notomista, M. W. Surya Atman, J. Yamauchi, M. Fujita, and M. Egerstedt,
+            “Coordination of robot teams over long distances. From Georgia Tech to Tokyo Tech and back: An 11,000km
+            multi-robot experiment”, IEEE Control Systems Magazine, Vol. 40, No. 4, pp. 53-79, 2020</li>
+          <li>G. Notomista and X. Cai, “A Safety and Passivity Filter for Robot Teleoperation Systems”, International
+            Workshop on Human-Friendly Robotics, 2020</li>
+          <li>G. Notomista, X. Cai, J. Yamauchi, and M. Egerstedt, “Passivity-based decentralized control of multi-robot
+            systems with delays using control barrier functions”, IEEE International Symposium on Multi-Robot and
+            Multi-Agent Systems, 2019</li>
+        </ul>
+        <hr>
+        <h5 id="multirobotgrasping">Human-multi-robot interaction for object grasping</h5>
+        <p>
+          In this preliminary work, done in collaboration with <a href="http://wpage.unina.it/mario.selvaggio/"
+            target="_blank">Mario Selvaggio</a> from the Università degli Studi di Napoli "Federico II", we developed an
+          intuitive human-multi-robot shared interaction control for applications of object grasping and manipulation.
+          <br>
+          The kinematic of the human hand is mapped to the kinematic of the multi-robot system in order to naturally
+          control a large number of robots using intuitive grasping gestures.
+        </p>
+        <figure class="image-container">
+          <img src="../images/research/hsi.jpg" alt="" style="width: 60%">
+        </figure>
+        <p>
+          <b>References</b>
+        </p>
+        <ul>
+          <li>M. Selvaggio and G. Notomista, “Towards natural human-swarm teleoperation using hand synergies”, Workshop
+            "Swarms: From Biology to Robotics and Back" at IEEE International Conference on Robotics and Automation,
+            2018</li>
+        </ul>
+      </div>
+    </div>
+    <div class="twelve columns" style="text-align: right; margin-top: 5%">
+      <a href="human_multi_robot_interaction.html#"><img src="../images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+    </div>
+  </div>
+  <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <footer class="container">
+    <div class="row">
+      <div class="six columns offset-by-three" style="margin-top: 15%; text-align: center">
+        <a style="margin: 5%" href="https://scholar.google.com/citations?user=KbEJvvwAAAAJ&hl=en&oi=ao" target="_blank">
+          <img src="../images/icons/google-scholar-square.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://github.com/gnotomista" target="_blank">
+          <img src="../images/icons/github.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://www.youtube.com/channel/UCvILzv7GRzAzQKuJcFpVLaw" target="_blank">
+          <img src="../images/icons/youtube.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://twitter.com/gnotomista" target="_blank">
+          <img src="../images/icons/twitter.svg" alt="" width="24" height="19">
+        </a>
+        <a style="margin: 5%" href="https://www.linkedin.com/in/gennaro-notomista-47a8a9240" target="_blank">
+          <img src="../images/icons/linkedin.svg" alt="" width="24" height="19">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 10%; text-align: center">
+        <small>&copy; 2022 Gennaro Notomista</small>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../js/custom.js"></script>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
