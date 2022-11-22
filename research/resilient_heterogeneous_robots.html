@@ -76,10 +76,82 @@
     <div class="row">
       <div class="twelve columns" style="margin-top: 15%">
         <h4 id="resilientheterogeneous">Resilient heterogeneous multi-robot systems</h4>
+        <p>
+          Resilience is a property that robotic systems need to exhibit in order to be successfully deployed in the real
+          world over long periods of time. When conditions are not nominal&mdash;because the environment is unknown,
+          unstructured, non-stationary, or because functionalities have been lost due to system
+          failures&mdash;<b>resilience is the property that allows robots to react and recover</b> by structurally
+          changing their behavior or their objective in order to survive, in a robotic sense.
+        </p>
+        <p>
+          <b>Heterogeneity can also contribute favorably to resilience</b>. Consider an example scenario where a
+          heterogeneous multi-robot system consisting of ground and aerial mobile robots, is tasked with carrying
+          objects to specified locations in the environment. Unexpected weather conditions might lead to high speed
+          winds in the environment, which might prevent aerial robots from making further progress towards the
+          accomplishment of their goal. In such a case, heterogeneity will allow the robot team to achieve the desired
+          objective despite the unexpected conditions.
+        </p>
+        <hr>
+        <h5>Resilient and energy-aware task allocation</h5>
+        <p>
+          The following constraint-optimization formulation is amenable to encode a resilient robot behavior in
+          multi-task execution scenarios:
+          $$
+          \begin{aligned}
+          \underset{u,\delta,\alpha}{\mathrm{minimize}} ~~& \| u \|^2 + \kappa_1 \| \delta \|^2 + \kappa_2 \|
+          \alpha-\alpha_0 \|^2\\
+          \mathrm{subject~to} ~~& g_{task,1}(x,u) \le \delta_1\\
+          ~~& \quad\vdots\\
+          ~~&g_{task,M}(x,u) \le \delta_M\\
+          ~~&g_{energy}(x,E,u) \le 0\\
+          ~~&P(\alpha)\delta\le0.
+          \end{aligned}
+          $$
+          Each task is encoded by means of the constraint function \(g_{task,i}\), where \(\delta_i\) is the slack
+          variable corresponding to task \(i\), used to prioritize tasks. The allocation of tasks to robots is
+          performed through the constraint \(P(\alpha)\delta\le0\). The allocation vector \(\alpha_0\) indicates a
+          desired allocation, evaluated based on the capabilities that different robots have at executing different
+          tasks.
+          <br>
+          It is interesting to notice that the allocation \(\alpha\) is an optimization variable <b>evaluated online</b>
+          alongside the control input \(u\) required by the robots to execute the allocated tasks. This feature allows
+          the allocation algorithm to adapt to varying environmental conditions and render the multi-robot system
+          <b>resilient to failures and unexpected phenomena</b>. The videos below showcase resilient robot teams in
+          multi-task execution scenarios and subject to internal failures and unexpected environmental phenomena.
+        </p>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/OQiLbEaZsZw"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+        <div class="iframe-container" style="--video-width: 60%">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fdfYID7u72o"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+        <p>
+          <b>References</b>
+        </p>
+        <ul>
+          <li>G. Notomista, S. Mayya, Y. Emam, C. Kroninger, A. Bohannon, S. Hutchinson and M. Egerstedt, “A Resilient
+            and Energy-Aware Task Allocation Framework for Heterogeneous Multi-Robot Systems”, IEEE Transactions on
+            Robotics, 2021</li>
+          <li>Y. Emam, G. Notomista, P. Glotfelter, and M. Egerstedt, “Data-Driven Adaptive Task Allocation for
+            Heterogeneous Multi-Robot Teams Using Robust Control Barrier Functions”, IEEE International Conference on
+            Robotics and Automation, 2021</li>
+          <li>G. Notomista, S. Mayya, M. Selvaggio, M. Santos, and C. Secchi, “A set-theoretic approach to multitask
+            execution and prioritization”, IEEE International Conference on Robotics and Automation, 2020</li>
+          <li>Y. Emam, S. Mayya, G. Notomista, A. Bohannon, and M. Egerstedt, “Adaptive task allocation for
+            heterogeneous multi-robot teams with evolving and unknown robot capabilities”, IEEE International Conference
+            on Robotics and Automation, 2020</li>
+          <li>G. Notomista, S. Mayya, S. Hutchinson, and M. Egerstedt, “An optimal task allocation strategy for
+            heterogeneous multi-robot systems”, European Control Conference, 2019</li>
+        </ul>
       </div>
     </div>
     <div class="twelve columns" style="text-align: right; margin-top: 5%">
-      <a href="resilient_heterogeneous_robots.html#"><img src="../images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+      <a href="resilient_heterogeneous_robots.html#"><img src="../images/icons/arrow-up-short.svg" alt="" width="24"
+          height="19"></a>
     </div>
   </div>
   <!-- Footer
