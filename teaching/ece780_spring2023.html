@@ -115,36 +115,40 @@
     <div class="container">
         <div class="row">
             <div class="twelve columns" style="margin-top: 15%">
-                <h4>ECE 780 T03: Robot Dynamics and Control (Spring 2022)</h4>
+                <h4>ECE 780 T03: Robot Dynamics and Control (Spring 2023)</h4>
 
                 <h5>Time and place</h5>
-                Wednesday, Friday 11:30-12:50, E7 4437
+                Thursday 13:00-14:20, E7 4043
+                <br>
+                Friday 13:00-14:20, E7 4053
 
                 <h5>Office hours</h5>
-                Wednesday 13:30-15:30
+                Tuesday 15:00-17:00
 
                 <img src="../images/teaching/ece780t03.jpg" alt="" style="width:100%;margin: 0px">
 
                 <h5>Description</h5>
                 This course will introduce students to dynamic modeling and control techniques for robotic systems, and
-                expose them to some cutting-edge research. The course will be divided into six modules, corresponding to
-                the following topics:
+                expose them to some cutting-edge research. The course will be divided into five modules, corresponding
+                to the following topics:
                 <ol>
-                    <li>Robot dynamics</li>
-                    <li>Motion control of manipulators</li>
-                    <li>Force control of manipulators</li>
-                    <li>Mobile robots</li>
-                    <li>Motion control of mobile robots</li>
-                    <li>Optimization-based control of robotic systems</li>
+                    <li>Dynamics of manipulators</li>
+                    <li>Control of manipulators</li>
+                    <li>Kinematics of mobile robots</li>
+                    <li>Control of mobile robots</li>
+                    <li>Optimization-based robot control</li>
                 </ol>
-                Each module will be presented during lectures and reinforced with homeworks containing both theoretical
-                exercises and programming assignments (MATLAB or Python). The course will also include a project which
-                will allow students to explore a specific area of robot dynamics and control that interests them in more
-                depth.
+                Each module will be presented during lectures supported by interactive demonstrations with the Franka
+                Emika manipulator robot (<a href="https://www.franka.de/research">https://www.franka.de/research</a>) in
+                the RoboHub. The concepts will be reinforced
+                through homeworks containing both theoretical exercises and programming assignments (Python or MATLAB).
+                The course will also include a project which will allow students to implement robot control algorithms
+                on the mobile manipulator DJI RoboMaster EP (<a
+                    href="https://www.dji.com/ca/robomaster-ep">https://www.dji.com/ca/robomaster-ep</a>).
 
                 <h5>Prerequisites</h5>
-                There are no formal prerequisites for the course. Some knowledge of linear algebra, mathematical
-                optimization, control systems, and robot kinematics can make life a bit easier.
+                There are no formal prerequisites for the course. Some knowledge of linear algebra, rigid body dynamics,
+                feedback control systems, and mathematical optimization can make life a bit easier.
 
                 <h5>Reading</h5>
                 There is no required textbook. The following texts will be used for parts of the course.
@@ -159,52 +163,78 @@
                 </ol>
                 Additional reading material will be provided as appropriate.
 
-                <h5>Grading</h5>
+                <h5>Delivarables and grading</h5>
                 <ul>
-                    <li>Homeworks: 60&percnt;</li>
-                    <li>Project: 40&percnt;</li>
+                    <li>Homeworks
+                        <ul>
+                            <li>4 homeworks</li>
+                            <li>15&percnt; each</li>
+                        </ul>
+                    </li>
+                    <li>Project
+                        <ul>
+                            <li>Midterm project report: 10&percnt;</li>
+                            <li>Final project report: 20&percnt;</li>
+                            <li>Project code: 10&percnt;</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h5>Project details</h5>
-                The project may consist of:
-                <ul>
-                    <li>Solution to a problem in the student's research area using the techniques covered during the
-                        course</li>
-                    <li>Independent study of a topic not covered in class</li>
-                </ul>
-                In both cases, a critical review of the research literature as well as computer modeling and simulations
-                have to be carried out.
-                <br>
+                The project will consist of a mobile manipulation task using the DJI RoboMaster EP programmed in Python.
                 The deliverables will be three:
-                <ul>
-                    <li>A short proposal, in the form of a 1-page PDF document, containing:
+                <ol>
+                    <li>A midterm report, in the form a PDF document of maximum 3 pages, describing the progress made
+                        and the results obtained so far</li>
+                    <li>A final report, in the form of a PDF document of maximum 6 pages,
+                        structured as follows:
                         <ul>
-                            <li>Problem description</li>
-                            <li>Novelty and/or impact</li>
-                            <li>How robot dynamics and control techniques play a key role</li>
-                            <li>Technical challenges</li>
-                            <li>Metric for success</li>
-                            <li>Timeline</li>
+                            <li>Section I: Proposed approach</li>
+                            <li>Section II: Results</li>
+                            <li>Section III: Discussion</li>
                         </ul>
                     </li>
-                    <li>A midterm project report, in the form a PDF document of maximum 4 pages, describing the progress
-                        made and the results obtained so far</li>
-                    <li>A final report, in the form of a PDF document of maximum 8 pages in the IEEE conference template
-                        (https://www.ieee.org/conferences/publishing/templates.html), structured as follows:
+                    <li>The code developed to complete the project</li>
+                </ol>
+                The work will be carried out in groups of 2 or 3 people. The reports must be accompanied by the detailed
+                description of the work carried out by each member of the group, including what sections of each report
+                were written by whom. The reports must be formatted using the IEEE conference template
+                (<a
+                    href="https://www.ieee.org/conferences/publishing/templates.html">https://www.ieee.org/conferences/publishing/templates.html</a>).
+
+                <h5>Project details (Alternative for MASc students)</h5>
+                The project will consist of the solution to a problem in the student's research area using the
+                techniques covered during the course. The deliverables will be four:
+                <ol>
+                    <li>A proposal, in the form of a 1-page PDF document, structured as follows:
                         <ul>
-                            <li>Introduction</li>
-                            <li>Literature review</li>
-                            <li>Materials and methods</li>
-                            <li>Results</li>
-                            <li>Discussion</li>
+                            <li>Section I: Problem description</li>
+                            <li>Section II: Novelty and/or impact</li>
+                            <li>Section III: How robot dynamics and control techniques play a key role</li>
+                            <li>Section IV: Technical challenges</li>
+                            <li>Section V: Metric for success</li>
+                            <li>Section VI: Timeline</li>
                         </ul>
                     </li>
-                </ul>
-                Additionally, a short video (maximum 1 minute) to supplement the results may also be attached.
-                <br>
-                The work may be carried out individually or in a group of maximum 3 people. In the latter case, the
-                report should be accompanied by the detailed description of the work carried out by each member of the
-                group, including what sections of the report were written by whom.
+                    <li>A midterm report, in the form a PDF document of maximum 3 pages, describing the progress made
+                        and the results obtained so far</li>
+                    <li>A final report, in the form of a PDF document of maximum 6 pages, structured as follows:
+                        <ul>
+                            <li>Section I: Introduction</li>
+                            <li>Section II: Literature review</li>
+                            <li>Section III: Materials and methods</li>
+                            <li>Section IV: Results</li>
+                            <li>Section V: Discussion</li>
+                        </ul>
+                    </li>
+                    <li>The code developed to complete the project</li>
+                </ol>
+                Additionally, a short video (maximum 1 minute) to supplement the results may also be attached. All
+                documents must be formatted using the IEEE conference template (<a
+                    href="https://www.ieee.org/conferences/publishing/templates.html">https://www.ieee.org/conferences/publishing/templates.html</a>).
+
+                <h5>Audit policy</h5>
+                Either the homeworks or the project must be completed to audit the course.
 
                 <h5>Policy on Academic Integrity</h5>
                 <b>Academic Integrity</b> To maintain a culture of academic integrity, members of the University of
@@ -216,17 +246,30 @@
                 Dean. When misconduct has been found to have occurred, disciplinary penalties will be imposed under
                 Policy 71 - Student Discipline. For information on categories of offenses and types of penalties,
                 students should refer to Policy 71 - Student Discipline,
-                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71.
+                \url{https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71}.
                 <br>
                 <b>Grievance</b> A student who believes that a decision affecting some aspect of their University life
                 has been unfair or unreasonable may have grounds for initiating a grievance. Read Policy 70 - Student
                 Petitions and Grievances, Section 4,
-                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70.
+                \url{https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70}.
+                <br>
+                <b>Discipline</b> A student is expected to know what constitutes academic integrity
+                (\url{https://uwaterloo.ca/academic-integrity}) to avoid committing an academic offence, and to take
+                responsibility for his/her actions. A student who is unsure whether an action constitutes an offence, or
+                who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about ``rules'' for
+                group work/collaboration should seek guidance from the course instructor, academic advisor, or the
+                undergraduate Associate Dean.
                 <br>
                 <b>Appeals</b> A student may appeal the finding and/or penalty in a decision made under Policy 70 -
                 Student Petitions and Grievances (other than regarding a petition) or Policy 71 - Student Discipline if
                 a ground for an appeal can be established. Read Policy 72 - Student Appeals,
-                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72.
+                \url{https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72}.
+                <br>
+                <b>Note for students with disabilities</b> The Office for persons with Disabilities (OPD), located in
+                Needles Hall, Room 1132, collaborates with all academic departments to arrange appropriate
+                accommodations for students with disabilities without compromising the academic integrity of the
+                curriculum. If you require academic accommodations to lessen the impact of your disability, please
+                register with the OPD at the beginning of each academic term.
                 <br>
                 <b>Academic Integrity Office (UW)</b> https://uwaterloo.ca/academic-integrity/.
 
@@ -235,206 +278,206 @@
                     <thead>
                         <tr>
                             <th style="width:10%">Date</th>
-                            <th style="width:50%">Subject</th>
-                            <th style="width:20%">Optional reading</th>
-                            <th style="width:20%">HW/project due</th>
+                            <th style="width:42%">Subject</th>
+                            <th style="width:23%">Optional reading</th>
+                            <th style="width:25%">HW/project due</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td></td>
-                            <td><b>ROBOT DYNAMICS</b></td>
+                            <td><b>DYNAMICS OF MANIPULATORS</b></td>
                             <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>May 4</td>
-                            <td>Direct and inverse kinematics</td>
-                            <td>3 [1], 2 [2]</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>May 6</td>
-                            <td>Differential kinematics</td>
-                            <td>4 [1], 3 [2]</td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>May 11</td>
-                            <td>Inverse kinematics algorithms</td>
+                            <td>Rigid body transformations</td>
+                            <td>2 [1], 2 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 12</td>
+                            <td>Direct kinematics</td>
+                            <td>4 [1], 3 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 18</td>
+                            <td>Differential kinematics</td>
+                            <td>3 [1], 2 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 19</td>
+                            <td>Inverse kinematics</td>
                             <td>5 [1], 3 [2]</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>May 13</td>
+                            <td>May 25</td>
                             <td>Lagrange formulation</td>
                             <td>6 [1], 7 [2]</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>May 18</td>
-                            <td>Dynamics of common manipulators</td>
+                            <td>May 26</td>
+                            <td>Dynamics model of manipulators</td>
                             <td>6 [1], 7 [2]</td>
-                            <td></td>
+                            <td>HW1</td>
                         </tr>
                         <tr>
-                            <td>May 20</td>
-                            <td>Dynamic parameter identification</td>
-                            <td>7 [2]</td>
-                            <td>HW1 (Dynamics)</td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td>&nbsp;</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><b>MOTION CONTROL OF MANIPULATORS</b></td>
+                            <td><b>CONTROL OF MANIPULATORS</b></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Jun 1</td>
+                            <td>Decentralized control</td>
+                            <td>8 [1], 8 [2]</td>
+                            <td>Project groups/proposal</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 2</td>
                             <td>Centralized control</td>
                             <td>9 [1], 8 [2]</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Jun 3</td>
-                            <td>Robust and adaptive control</td>
-                            <td>9 [1], 8 [2]</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jun 6</td>
+                            <td>Jun 8</td>
                             <td>Operational space control</td>
                             <td>9 [1], 8 [2]</td>
-                            <td>Project proposal</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td><b>FORCE CONTROL OF MANIPULATORS</b></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jun 13</td>
+                            <td>Jun 9</td>
                             <td>Impedance and admittance control</td>
-                            <td>10 [1], 9 [2]</td>
+                            <td>9 [1], 8 [2]</td>
+                            <td>HW2</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>KINEMATICS OF MOBILE ROBOTS</b></td>
+                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Jun 15</td>
-                            <td>Force control</td>
-                            <td>10 [1], 9 [2]</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><b>MOBILE ROBOTS</b></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Jun 17</td>
                             <td>Kinematic constraints</td>
                             <td>14 [1], 11 [2]</td>
-                            <td>HW2 (Control of manipulators)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 16</td>
+                            <td>Kinematic model</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Jun 22</td>
+                            <td>Dynamic model</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 23</td>
                             <td>Controllability</td>
                             <td>14 [1], 11 [2]</td>
-                            <td></td>
+                            <td>HW3</td>
                         </tr>
                         <tr>
-                            <td>Jun 24</td>
-                            <td>Differential flatness</td>
-                            <td>14 [1], 11 [2]</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
+                            <td>&nbsp;</td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><b>MOTION CONTROL OF MOBILE ROBOTS</b></td>
+                            <td><b>CONTROL OF MOBILE ROBOTS</b></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Jun 29</td>
-                            <td>Control of unicycles</td>
+                            <td>Control of driftless systems</td>
                             <td>14 [1], 11 [2]</td>
-                            <td>HW3 (Mobile robots)</td>
-                        </tr>
-                        <tr>
-                            <td>Jul 1</td>
-                            <td><b>Canada day &mdash; No class</b></td>
-                            <td></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Jul 6</td>
-                            <td>Control of autovehicles</td>
-                            <td></td>
+                            <td>Jun 30</td>
+                            <td>Control of driftless systems</td>
+                            <td>14 [1], 11 [2]</td>
                             <td>Midterm project report</td>
                         </tr>
                         <tr>
-                            <td>Jul 8</td>
-                            <td>Control of quadrotors</td>
+                            <td>Jul 6</td>
+                            <td>Differential flatness</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 7</td>
+                            <td>Control of differentially flat systems</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td>HW4</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><b>OPTIMIZATION-BASED CONTROL OF ROBOTIC SYSTEMS</b></td>
+                            <td><b>OPTIMIZATION-BASED ROBOT CONTROL</b></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>Jul 13</td>
                             <td>Recap of mathematical optimization</td>
-                            <td>1 [3]</td>
+                            <td>1 [3], lecture notes</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Jul 15</td>
+                            <td>Jul 14</td>
                             <td>Constrained convex optimization</td>
-                            <td>4, 5 [3]</td>
-                            <td>HW4 (Control of mobile robots)</td>
+                            <td>4, 5 [3], lecture notes</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Jul 20</td>
-                            <td>Min-norm control laws</td>
-                            <td>4 [4]</td>
+                            <td>Stability and control Lyapunov functions</td>
+                            <td>4 [4], lecture notes</td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Jul 22</td>
+                            <td>Jul 21</td>
+                            <td>Invariance and control barrier functions</td>
+                            <td>4 [4], lecture notes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 27</td>
+                            <td>Combining stability and invariance tasks</td>
+                            <td>4 [4], lecture notes</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 28</td>
                             <td>Research challenges and opportunities</td>
                             <td></td>
                             <td>Final project report</td>
@@ -444,7 +487,8 @@
             </div>
         </div>
         <div class="twelve columns" style="text-align: right; margin-top: 5%">
-            <a href="ece780.html#"><img src="../images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+            <a href="ece780_spring2023.html"><img src="../images/icons/arrow-up-short.svg" alt="" width="24"
+                    height="19"></a>
         </div>
     </div>
     <!-- Footer

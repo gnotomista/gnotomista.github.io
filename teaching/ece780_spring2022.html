@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Gennaro Notomista</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Analytics scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4GKRS852H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-X4GKRS852H');
+    </script>
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        h5 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        ul,
+        ol,
+        li,
+        ul>li>ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        ul,
+        ol {
+            margin-left: 16px;
+        }
+
+        ol#books {
+            counter-reset: list;
+        }
+
+        ol#books>li {
+            list-style: none;
+        }
+
+        ol#books>li:before {
+            content: "[" counter(list, decimal) "] ";
+            counter-increment: list;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        td,
+        th {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    </style>
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../images/icons/smart_toy_black_24dp.svg">
+</head>
+
+<body>
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav id="responsive-nav" class="nav-show">
+        <div id="responsive-nav-container-center" class="container-center-navigation">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../index.html">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../files/notomista_gennaro_cv.pdf">CV</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../research.html">Research</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../publications.html">Publications</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link active" href="../teaching.html">Teaching</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../ancillaries.html">Res ancillares</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../personal.html">Personal</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../contact.html">Contact</a>
+                </li>
+                <li class="icon">
+                    <a href="javascript:void(0);" onclick="toggleMobileNav();">&#9776;</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns" style="margin-top: 15%">
+                <h4>ECE 780 T03: Robot Dynamics and Control (Spring 2022)</h4>
+
+                <h5>Time and place</h5>
+                Wednesday, Friday 11:30-12:50, E7 4437
+
+                <h5>Office hours</h5>
+                Wednesday 13:30-15:30
+
+                <img src="../images/teaching/ece780t03.jpg" alt="" style="width:100%;margin: 0px">
+
+                <h5>Description</h5>
+                This course will introduce students to dynamic modeling and control techniques for robotic systems, and
+                expose them to some cutting-edge research. The course will be divided into six modules, corresponding to
+                the following topics:
+                <ol>
+                    <li>Robot dynamics</li>
+                    <li>Motion control of manipulators</li>
+                    <li>Force control of manipulators</li>
+                    <li>Mobile robots</li>
+                    <li>Motion control of mobile robots</li>
+                    <li>Optimization-based control of robotic systems</li>
+                </ol>
+                Each module will be presented during lectures and reinforced with homeworks containing both theoretical
+                exercises and programming assignments (MATLAB or Python). The course will also include a project which
+                will allow students to explore a specific area of robot dynamics and control that interests them in more
+                depth.
+
+                <h5>Prerequisites</h5>
+                There are no formal prerequisites for the course. Some knowledge of linear algebra, mathematical
+                optimization, control systems, and robot kinematics can make life a bit easier.
+
+                <h5>Reading</h5>
+                There is no required textbook. The following texts will be used for parts of the course.
+                <ol id="books">
+                    <li>Mark Spong, Seth Hutchinson, and Mathukumalli Vidyasagar, Robot modeling and control, John Wiley
+                        &amp; Sons, 2020</li>
+                    <li>Bruno Siciliano, Lorenzo Sciavicco, Luigi Villani, and Giuseppe Oriolo, Robotics. Modelling,
+                        planning and control, Springer, 2009</li>
+                    <li>Stephen Boyd and Lieven Vandenberghe, Convex optimization, Cambridge University Press, 2004</li>
+                    <li>Magnus Egerstedt, Robot Ecology: Constraint-Based Design for Long-Duration Autonomy, Princeton
+                        University Press, 2021</li>
+                </ol>
+                Additional reading material will be provided as appropriate.
+
+                <h5>Grading</h5>
+                <ul>
+                    <li>Homeworks: 60&percnt;</li>
+                    <li>Project: 40&percnt;</li>
+                </ul>
+
+                <h5>Project details</h5>
+                The project may consist of:
+                <ul>
+                    <li>Solution to a problem in the student's research area using the techniques covered during the
+                        course</li>
+                    <li>Independent study of a topic not covered in class</li>
+                </ul>
+                In both cases, a critical review of the research literature as well as computer modeling and simulations
+                have to be carried out.
+                <br>
+                The deliverables will be three:
+                <ul>
+                    <li>A short proposal, in the form of a 1-page PDF document, containing:
+                        <ul>
+                            <li>Problem description</li>
+                            <li>Novelty and/or impact</li>
+                            <li>How robot dynamics and control techniques play a key role</li>
+                            <li>Technical challenges</li>
+                            <li>Metric for success</li>
+                            <li>Timeline</li>
+                        </ul>
+                    </li>
+                    <li>A midterm project report, in the form a PDF document of maximum 4 pages, describing the progress
+                        made and the results obtained so far</li>
+                    <li>A final report, in the form of a PDF document of maximum 8 pages in the IEEE conference template
+                        (https://www.ieee.org/conferences/publishing/templates.html), structured as follows:
+                        <ul>
+                            <li>Introduction</li>
+                            <li>Literature review</li>
+                            <li>Materials and methods</li>
+                            <li>Results</li>
+                            <li>Discussion</li>
+                        </ul>
+                    </li>
+                </ul>
+                Additionally, a short video (maximum 1 minute) to supplement the results may also be attached.
+                <br>
+                The work may be carried out individually or in a group of maximum 3 people. In the latter case, the
+                report should be accompanied by the detailed description of the work carried out by each member of the
+                group, including what sections of the report were written by whom.
+
+                <h5>Policy on Academic Integrity</h5>
+                <b>Academic Integrity</b> To maintain a culture of academic integrity, members of the University of
+                Waterloo are expected to promote honesty, trust, fairness, respect and responsibility. A student is
+                expected to know what constitutes academic integrity, to avoid committing academic offences, and to take
+                responsibility for their actions. A student who is unsure whether an action constitutes an offence, or
+                who needs help in learning how to avoid offences (e.g., plagiarism, cheating) or about “rules” for group
+                work/collaboration should seek guidance from course instructor, academic advisor, or Graduate Associate
+                Dean. When misconduct has been found to have occurred, disciplinary penalties will be imposed under
+                Policy 71 - Student Discipline. For information on categories of offenses and types of penalties,
+                students should refer to Policy 71 - Student Discipline,
+                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-71.
+                <br>
+                <b>Grievance</b> A student who believes that a decision affecting some aspect of their University life
+                has been unfair or unreasonable may have grounds for initiating a grievance. Read Policy 70 - Student
+                Petitions and Grievances, Section 4,
+                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-70.
+                <br>
+                <b>Appeals</b> A student may appeal the finding and/or penalty in a decision made under Policy 70 -
+                Student Petitions and Grievances (other than regarding a petition) or Policy 71 - Student Discipline if
+                a ground for an appeal can be established. Read Policy 72 - Student Appeals,
+                https://uwaterloo.ca/secretariat/policies-procedures-guidelines/policy-72.
+                <br>
+                <b>Academic Integrity Office (UW)</b> https://uwaterloo.ca/academic-integrity/.
+
+                <h5>Schedule</h5>
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th style="width:10%">Date</th>
+                            <th style="width:50%">Subject</th>
+                            <th style="width:20%">Optional reading</th>
+                            <th style="width:20%">HW/project due</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td><b>ROBOT DYNAMICS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 4</td>
+                            <td>Direct and inverse kinematics</td>
+                            <td>3 [1], 2 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 6</td>
+                            <td>Differential kinematics</td>
+                            <td>4 [1], 3 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 11</td>
+                            <td>Inverse kinematics algorithms</td>
+                            <td>5 [1], 3 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 13</td>
+                            <td>Lagrange formulation</td>
+                            <td>6 [1], 7 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 18</td>
+                            <td>Dynamics of common manipulators</td>
+                            <td>6 [1], 7 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>May 20</td>
+                            <td>Dynamic parameter identification</td>
+                            <td>7 [2]</td>
+                            <td>HW1 (Dynamics)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>MOTION CONTROL OF MANIPULATORS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 1</td>
+                            <td>Centralized control</td>
+                            <td>9 [1], 8 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 3</td>
+                            <td>Robust and adaptive control</td>
+                            <td>9 [1], 8 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 6</td>
+                            <td>Operational space control</td>
+                            <td>9 [1], 8 [2]</td>
+                            <td>Project proposal</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>FORCE CONTROL OF MANIPULATORS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 13</td>
+                            <td>Impedance and admittance control</td>
+                            <td>10 [1], 9 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 15</td>
+                            <td>Force control</td>
+                            <td>10 [1], 9 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>MOBILE ROBOTS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 17</td>
+                            <td>Kinematic constraints</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td>HW2 (Control of manipulators)</td>
+                        </tr>
+                        <tr>
+                            <td>Jun 22</td>
+                            <td>Controllability</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 24</td>
+                            <td>Differential flatness</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>MOTION CONTROL OF MOBILE ROBOTS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jun 29</td>
+                            <td>Control of unicycles</td>
+                            <td>14 [1], 11 [2]</td>
+                            <td>HW3 (Mobile robots)</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 1</td>
+                            <td><b>Canada day &mdash; No class</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 6</td>
+                            <td>Control of autovehicles</td>
+                            <td></td>
+                            <td>Midterm project report</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 8</td>
+                            <td>Control of quadrotors</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><b>OPTIMIZATION-BASED CONTROL OF ROBOTIC SYSTEMS</b></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 13</td>
+                            <td>Recap of mathematical optimization</td>
+                            <td>1 [3]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 15</td>
+                            <td>Constrained convex optimization</td>
+                            <td>4, 5 [3]</td>
+                            <td>HW4 (Control of mobile robots)</td>
+                        </tr>
+                        <tr>
+                            <td>Jul 20</td>
+                            <td>Min-norm control laws</td>
+                            <td>4 [4]</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Jul 22</td>
+                            <td>Research challenges and opportunities</td>
+                            <td></td>
+                            <td>Final project report</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="twelve columns" style="text-align: right; margin-top: 5%">
+            <a href="ece780_spring2022.html"><img src="../images/icons/arrow-up-short.svg" alt="" width="24" height="19"></a>
+        </div>
+    </div>
+    <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <footer class="container">
+        <div class="row">
+            <div class="six columns offset-by-three" style="margin-top: 15%; text-align: center">
+                <a style="margin: 5%" href="https://scholar.google.com/citations?user=KbEJvvwAAAAJ&hl=en&oi=ao"
+                    target="_blank">
+                    <img src="../images/icons/google-scholar-square.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://github.com/gnotomista" target="_blank">
+                    <img src="../images/icons/github.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://www.youtube.com/channel/UCvILzv7GRzAzQKuJcFpVLaw" target="_blank">
+                    <img src="../images/icons/youtube.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://twitter.com/gnotomista" target="_blank">
+                    <img src="../images/icons/twitter.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://www.linkedin.com/in/gennaro-notomista-47a8a9240" target="_blank">
+                    <img src="../images/icons/linkedin.svg" alt="" width="24" height="19">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 10%; text-align: center">
+                <small>&copy; 2023 Gennaro Notomista</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
