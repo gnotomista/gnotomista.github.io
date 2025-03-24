@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Gennaro Notomista</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Analytics scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4GKRS852H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-X4GKRS852H');
+    </script>
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        h5 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        ul,
+        ol,
+        li,
+        ul>li>ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        ul,
+        ol {
+            margin-left: 16px;
+        }
+
+        ol#books {
+            counter-reset: list;
+        }
+
+        ol#books>li {
+            list-style: none;
+        }
+
+        ol#books>li:before {
+            content: "[" counter(list, decimal) "] ";
+            counter-increment: list;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        td,
+        th {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+    </style>
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../images/icons/smart_toy_black_24dp.svg">
+</head>
+
+<body>
+    <!-- Navbar
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <nav id="responsive-nav" class="nav-show">
+        <div id="responsive-nav-container-center" class="container-center-navigation">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../index.html">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../files/notomista_gennaro_cv.pdf">CV</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../research.html">Research</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../publications.html">Publications</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link active" href="../teaching.html">Teaching</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../ancillaries.html">Res ancillares</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../personal.html">Personal</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="../contact.html">Contact</a>
+                </li>
+                <li class="icon">
+                    <a href="javascript:void(0);" onclick="toggleMobileNav();">&#9776;</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Primary Page Layout
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns" style="margin-top: 15%">
+                <h4>ECE 486 / ECE 780 T03: Robot Dynamics and Control (Spring 2025)</h4>
+
+                <a href="../files/teaching/ece486_ece780t03_spring2025_syllabus.pdf">Syllabus (tentative)</a>
+            </div>
+        </div>
+        <div class="twelve columns" style="text-align: right; margin-top: 5%">
+            <a href="ece486_ece780t03_spring2025.html"><img src="../images/icons/arrow-up-short.svg" alt="" width="24"
+                    height="19"></a>
+        </div>
+    </div>
+    <!-- Footer
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <footer class="container">
+        <div class="row">
+            <div class="six columns offset-by-three" style="margin-top: 15%; text-align: center">
+                <a style="margin: 5%" href="https://scholar.google.com/citations?user=KbEJvvwAAAAJ&hl=en&oi=ao"
+                    target="_blank">
+                    <img src="../images/icons/google-scholar-square.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://github.com/gnotomista" target="_blank">
+                    <img src="../images/icons/github.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://www.youtube.com/channel/UCvILzv7GRzAzQKuJcFpVLaw" target="_blank">
+                    <img src="../images/icons/youtube.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://twitter.com/gnotomista" target="_blank">
+                    <img src="../images/icons/twitter-x.svg" alt="" width="24" height="19">
+                </a>
+                <a style="margin: 5%" href="https://www.linkedin.com/in/gennaro-notomista-47a8a9240" target="_blank">
+                    <img src="../images/icons/linkedin.svg" alt="" width="24" height="19">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns offset-by-three" style="margin-top: 5%; margin-bottom: 10%; text-align: center">
+                <small>&copy; 2025 Gennaro Notomista</small>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
